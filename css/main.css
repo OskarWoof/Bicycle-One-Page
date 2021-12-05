@@ -89,6 +89,15 @@ body {
   }
 }
 
+@keyframes expand {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .nav__container li:nth-child(3) {
   display: none;
 }
@@ -371,14 +380,14 @@ body {
 }
 
 /* Fading animation */
-.fromLeft {
-  -webkit-animation-name: fromLeft;
+.fromTop {
+  -webkit-animation-name: fromTop;
   -webkit-animation-duration: 1.5s;
-  animation-name: fromLeft;
+  animation-name: fromTop;
   animation-duration: 1.5s;
 }
 
-@-webkit-keyframes fromLeft {
+@-webkit-keyframes fromTop {
   from {
     transform: translateY(-100%);
     /* opacity: 0; */
@@ -388,7 +397,7 @@ body {
   }
 }
 
-@keyframes fromLeft {
+@keyframes fromTop {
   from {
     transform: translateY(-100%);
     opacity: 0;
