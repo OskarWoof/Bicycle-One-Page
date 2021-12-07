@@ -166,6 +166,9 @@
                 <span class="dot" onclick="currentSlide(2)"></span>
                 <span class="dot" onclick="currentSlide(3)"></span>
             </div>
+            <!-- Navigation arrows -->
+            <a class="left" onclick="nextSlide(-1)">❮</a>
+            <a class="right" onclick="nextSlide(1)">❯</a>
         </div>
 
         <!--===============  SHOP ===============-->
@@ -238,11 +241,12 @@
             <div class="container">
                 <img src="/img/contact-logo.png" alt="">
                 <p>Stay on the saddle!</p>
-                <label for="email">
-                    <input type="email" name="email" id="email"
-                        pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/" placeholder="enter your email..." requiered>
-                    <button type="submit">GO</button>
-                </label>
+                <form action="/action__page.php" method="post">
+                    <label for="email">
+                        <input type="email" name="email" id="email" placeholder="enter your email..." requiered>
+                        <input class="submit" type="submit" value="GO">
+                    </label>
+                </form>
             </div>
         </section>
 
@@ -253,13 +257,13 @@
                     <p>AOD New York<br><span>2250 Lexington Avenue<br>New York, NY 10035 - info@domain.com</span></p>
                 </div>
                 <div class="foo2">
-                    <a href="#"><img class="tweet" src="/img/tweet-foo.png" alt=""></a>
-                    <a href="#"><img class="face" src="/img/face-foo.png" alt=""></a>
-                    <a href="#"><img class="pinterest" src="/img/pinterest-foo.png" alt=""></a>
+                    <a href="https://twitter.com" target="_blank"><img class="tweet" src="/img/tweet-foo.png" alt=""></a>
+                    <a href="https://facebook.com" target="_blank"><img class="face" src="/img/face-foo.png" alt=""></a>
+                    <a href="https://pinterest.com" target="_blank"><img class="pinterest" src="/img/pinterest-foo.png" alt=""></a>
                 </div>
                 <div class="foo3">
                     <p>Handcrafted by</p>
-                    <a href="#"><img src="/img/yebo-logo.png" alt=""></a>
+                    <a href="#"><img src="/img/Q-logo.png" alt=""></a>
                 </div>
             </div>
         </footer>

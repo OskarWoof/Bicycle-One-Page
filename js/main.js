@@ -1,5 +1,5 @@
 // SLIDER
-
+/* */
 var slideIndex = 1;
 showSlides(slideIndex);
 
@@ -8,8 +8,16 @@ function plusSlides(n) {
 }
 
 function currentSlide(n) {
-  showSlides((slideIndex = n));
+showSlides((slideIndex = n));
 }
+
+function nextSlide(n) {
+  showSlides((slideIndex += n));
+}
+
+function currentSlide(n) {
+  showSlides((slideIndex = n));
+}  
 
 function showSlides(n) {
   var i;
@@ -30,6 +38,7 @@ function showSlides(n) {
   slides[slideIndex - 1].style.display = "block";
   dots[slideIndex - 1].className += " active";
 }
+
 
 // NAV
 const navContainer = document.getElementById("nav-container");
@@ -61,14 +70,13 @@ function linkAction() {
 
 navLink.forEach((n) => n.addEventListener("click", linkAction));
 
-
 /*=============== SCROLL-HEADER ===============*/
 const navHeader = document.getElementById("header");
 
 function headerSticky() {
   const scrollY = window.pageYOffset;
 
-  if (scrollY > 50) {
+  if (scrollY > 50 || scrollY > 25) {
     navHeader.classList.add("scroll-header");
   } else {
     navHeader.classList.remove("scroll-header");
@@ -76,7 +84,6 @@ function headerSticky() {
 }
 
 window.addEventListener("scroll", headerSticky);
-
 
 /*========== CHANGE LINK COLOR WITH SCROLLING ==========*/
 const sections = document.querySelectorAll("section[id]");
@@ -102,4 +109,3 @@ function scrollActive() {
 }
 
 window.addEventListener("scroll", scrollActive);
-
